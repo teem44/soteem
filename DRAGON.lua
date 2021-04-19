@@ -1573,8 +1573,8 @@ return false  end
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.is_supergroup_ == false then
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.ID and data.type_.channel_.status_.ID == 'ChatMemberStatusEditor' then
 send(msg.chat_id_, msg.id_,' ℘︙ البوت ادمن في القناة \n ℘︙ تم تفعيل الاشتراك الاجباري في \n ℘︙ ايدي القناة ('..data.id_..')\n ℘︙ معرف القناة ([@'..data.type_.channel_.username_..'])')
-database:set(bot_id..'add:ch:id',data.id_)
-database:set(bot_id..'add:ch:username','@'..data.type_.channel_.username_)
+database:set(bot_id..msg.chat_id_..'add:ch:id',data.id_)
+database:set(bot_id..msg.chat_id_..'add:ch:username','@'..data.type_.channel_.username_)
 else
 send(msg.chat_id_, msg.id_,' ℘︙ عذرآ البوت ليس ادمن بالقناه ')
 end
@@ -1589,7 +1589,7 @@ database:del(bot_id.."textch:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_)
 return false  end 
 database:del(bot_id.."textch:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 local texxt = string.match(text, "(.*)") 
-database:set(bot_id..'text:ch:user',texxt)
+database:set(bot_id..msg.chat_id_..'text:ch:user',texxt)
 send(msg.chat_id_, msg.id_,' ℘︙ تم تغيير رسالة الاشتراك ')
 end
 
